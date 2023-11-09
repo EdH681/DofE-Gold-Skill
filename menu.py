@@ -2,11 +2,11 @@ import pygame
 __name__ = 'menu'
 
 '''
-This will be the menu screen with:
-- a play button
-- a character customise button
-- a stats viewer button
-- a settings button
+To do:
+- character button
+- stats button
+- settings button 
+- complete assets and update buttons
 '''
 
 
