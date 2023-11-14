@@ -1,4 +1,3 @@
-import pygame
 __name__ = 'menu'
 
 '''
