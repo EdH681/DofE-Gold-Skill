@@ -8,6 +8,7 @@ To do:
 '''
 
 
+# the button to begin playing
 def play_button(surface, colour, size, screensize):
     width, height = size, size
     x =(screensize[0]/2) - (width/2)
@@ -15,6 +16,7 @@ def play_button(surface, colour, size, screensize):
     play = pygame.draw.rect(surface, colour, (x, y, width, height), 1)
 
 
+# the button to open the character customisation screen
 def character_change(surface, colour, size, screensize):
     width, height = size, size
     x = (screensize[0]/2) - (width/2) - (size * 1.5)
@@ -22,6 +24,7 @@ def character_change(surface, colour, size, screensize):
     character = pygame.draw.rect(surface, colour, (x, y, width, height), 1)
 
 
+# the button to open the stats viewer screen
 def stats_viewer(surface, colour, size, screensize):
     width, height = size, size
     x = (screensize[0]/2) - (width/2) + (size * 1.5)
@@ -29,6 +32,7 @@ def stats_viewer(surface, colour, size, screensize):
     stats = pygame.draw.rect(surface, colour, (x, y, width, height), 1)
 
 
+# the part that runs
 def menu(surface, screensize=(1920, 1080)):
     surface.fill('black')
     play_button(surface, 'red', 300, screensize)
