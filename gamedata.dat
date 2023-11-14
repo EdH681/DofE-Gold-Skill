@@ -1,2 +1,5 @@
 initialised=False
-window=menu
+window=modules
+bronze=active
+silver=inactive
+gold=inactive
