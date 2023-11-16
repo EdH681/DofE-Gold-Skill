@@ -1,5 +1,10 @@
 import pygame
 
+'''
+To do:
+- Create assets and update buttons
+'''
+
 
 def level_check(compare):
     levels = ["bronze", "silver", "gold"]
@@ -62,8 +67,7 @@ def gold(surface, colour, screensize, mouse, click):
         print("gold")
 
 
-
-
+# the part that runs
 def selection(surface, screensize=(1920, 1080)):
     surface.fill("black")
     mousepos = pygame.mouse.get_pos()
@@ -71,5 +75,4 @@ def selection(surface, screensize=(1920, 1080)):
     bronze(surface, 'red', screensize, mousepos, LMB)
     silver(surface, 'red', screensize, mousepos, LMB)
     gold(surface, 'red', screensize, mousepos, LMB)
-    #print(level_check("bronze"))
     pygame.display.update()

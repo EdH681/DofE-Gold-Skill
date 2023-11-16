@@ -10,8 +10,8 @@ To do:
 # the button to begin playing
 def play_button(surface, colour, size, screensize, mouse, clicked):
     width, height = size, size
-    x =(screensize[0]/2) - (width/2)
-    y =(screensize[1]/2) - (height/2)
+    x = (screensize[0] / 2) - (width / 2)
+    y = (screensize[1] / 2) - (height / 2)
     play = pygame.draw.rect(surface, colour, (x, y, width, height), 1)
 
     if play.collidepoint(mouse) and clicked:
@@ -27,16 +27,16 @@ def play_button(surface, colour, size, screensize, mouse, clicked):
 # the button to open the character customisation screen
 def character_change(surface, colour, size, screensize):
     width, height = size, size
-    x = (screensize[0]/2) - (width/2) - (size * 1.5)
-    y = (screensize[1] / 2) - (size/2)
+    x = (screensize[0] / 2) - (width / 2) - (size * 1.5)
+    y = (screensize[1] / 2) - (size / 2)
     character = pygame.draw.rect(surface, colour, (x, y, width, height), 1)
 
 
 # the button to open the stats viewer screen
 def stats_viewer(surface, colour, size, screensize):
     width, height = size, size
-    x = (screensize[0]/2) - (width/2) + (size * 1.5)
-    y = (screensize[1] / 2) - (size/2)
+    x = (screensize[0] / 2) - (width / 2) + (size * 1.5)
+    y = (screensize[1] / 2) - (size / 2)
     stats = pygame.draw.rect(surface, colour, (x, y, width, height), 1)
 
 
