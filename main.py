@@ -27,7 +27,7 @@ windows = {
     "modules": lambda: selection(win, size)
     }
 
-x, y = 1000, 500
+x, y, backx, backy = 1000, 500, 5000, 2500
 
 # --mainloop--
 if __name__ == "__main__":
@@ -40,8 +40,9 @@ if __name__ == "__main__":
             window = current[1]
             window = window.replace("\n", "")
 
-            run = windows[window]
-            run()
+            #run = windows[window]
+            #run()
+            x, y, backx, backy = movement(win, x, y, backx, backy)
 
 
         pygame.display.update()
