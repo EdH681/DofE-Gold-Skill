@@ -12,22 +12,23 @@ size = width, height = monitor.width, monitor.height
 
 pygame.init()
 win = pygame.display.set_mode(size, pygame.FULLSCREEN)
+pygame.mouse.set_visible(False)
 
 # setting updating gamedata.dat to be menu
-with open("gamedata.dat", "r") as file:
+"""with open("gamedata.dat", "r") as file:
     full = file.read()
     current = full.split()[1].split("=")[1]
     full = full.replace(current, "menu")
 with open("gamedata.dat", "w") as file:
-    file.write(full)
+    file.write(full)"""
 
 # storing the possible windows with a text identifier to retrieve from the text file
 windows = {
     "menu": lambda: menu(win, size),
-    "modules": lambda: selection(win, size)
+    "modules": lambda: selection(win, size),
+    "testing": lambda: testing(win)
     }
 
-x, y, backx, backy = 1000, 500, 5000, 2500
 
 # --mainloop--
 if __name__ == "__main__":
@@ -40,9 +41,8 @@ if __name__ == "__main__":
             window = current[1]
             window = window.replace("\n", "")
 
-            #run = windows[window]
-            #run()
-            x, y, backx, backy = movement(win, x, y, backx, backy)
+            run = windows[window]
+            run()
 
 
         pygame.display.update()
